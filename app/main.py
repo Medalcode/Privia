@@ -1,9 +1,10 @@
-from fastapi import FastAPI, Depends, HTTPException
-from pydantic import BaseModel, AnyHttpUrl, EmailStr
-from sqlalchemy.orm import Session
 from uuid import uuid4
 
-from app.adapters.database import SessionLocal, init_db, Empresa, Escaneo, HallazgoVulnerabilidad
+from fastapi import Depends, FastAPI, HTTPException
+from pydantic import AnyHttpUrl, BaseModel, EmailStr
+from sqlalchemy.orm import Session
+
+from app.adapters.database import Empresa, Escaneo, SessionLocal, init_db
 from app.workers.tasks import iniciar_auditoria_web
 
 # Inicializar DB (crea tablas si no existen)

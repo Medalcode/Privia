@@ -1,5 +1,5 @@
-from app.core.use_cases import CalcularAuditoriaUseCase
 from app.core.entities import Hallazgo, Severidad
+from app.core.use_cases import CalcularAuditoriaUseCase
 
 
 def test_calculo_riesgo_simple():

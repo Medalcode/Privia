@@ -1,6 +1,8 @@
 import asyncio
-from typing import List
-from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeoutError
+
+from playwright.async_api import TimeoutError as PlaywrightTimeoutError
+from playwright.async_api import async_playwright
+
 from app.core.entities import Hallazgo, Severidad
 
 
@@ -33,8 +35,8 @@ class PrivacyScraper:
     def __init__(self, timeout: int = 15000):
         self.timeout = timeout
 
-    async def auditar_sitio(self, url: str) -> List[Hallazgo]:
-        hallazgos: List[Hallazgo] = []
+    async def auditar_sitio(self, url: str) -> list[Hallazgo]:
+        hallazgos: list[Hallazgo] = []
 
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
@@ -116,7 +118,7 @@ class PrivacyScraper:
 
         return hallazgos
 
-    def run_sync(self, url: str) -> List[Hallazgo]:
+    def run_sync(self, url: str) -> list[Hallazgo]:
         """Helper síncrono para ejecutar desde código no-asíncrono."""
         try:
             loop = asyncio.get_event_loop()

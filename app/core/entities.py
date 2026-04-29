@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import List
 from enum import Enum
 
 
@@ -22,4 +21,4 @@ class Hallazgo:
 class InformeAuditoria:
     empresa_id: str
     riesgo_global: int
-    hallazgos: List[Hallazgo]
+    hallazgos: list[Hallazgo]

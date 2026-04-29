@@ -1,9 +1,10 @@
 import os
 import time
-from sqlalchemy import create_engine, Column, String, Text, Integer, ForeignKey, DateTime
-from sqlalchemy.orm import sessionmaker, declarative_base, relationship
-from sqlalchemy.sql import func
 import uuid
+
+from sqlalchemy import Column, DateTime, ForeignKey, Integer, String, Text, create_engine
+from sqlalchemy.orm import declarative_base, relationship, sessionmaker
+from sqlalchemy.sql import func
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./audit_database.db")
 

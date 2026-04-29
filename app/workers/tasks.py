@@ -1,5 +1,6 @@
 from app.adapters.database import SessionLocal
 from app.services.auditoria_service import ejecutar_auditoria_escaneo
+
 from .celery_app import celery_app
 
 
