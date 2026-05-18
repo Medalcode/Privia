@@ -1,3 +1,5 @@
+[![CI](https://github.com/Medalcode/Privia/actions/workflows/ci.yml/badge.svg)](https://github.com/Medalcode/Privia/actions/workflows/ci.yml)
+
 # Privia — Auditoría Automatizada de Cumplimiento de Privacidad (MVP)
 
 Privia es un MVP de SaaS B2B para auditoría automatizada de privacidad. La idea es escanear una web, detectar señales técnicas de riesgo y generar una base para reportes de cumplimiento.
